@@ -1,5 +1,6 @@
 package com.example.api.card
 
+import com.example.api.auth.User
 import jakarta.persistence.Entity
 import jakarta.persistence.Id
 import jakarta.persistence.ManyToOne

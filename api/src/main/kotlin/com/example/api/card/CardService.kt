@@ -1,5 +1,6 @@
 package com.example.api.card
 
+import com.example.api.auth.User
 import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 import java.util.*

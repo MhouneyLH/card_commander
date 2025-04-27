@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres
+    container_name: card_commander_db
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # managing db through web ui
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8001:8080
+
+
+volumes:
+  postgres_data:
