@@ -1,0 +1,36 @@
+### Get all cards
+GET http://localhost:8080/cards
+
+### Get card by ID (replace UUID with an actual ID)
+GET http://localhost:8080/cards/f937fc38-cf42-4d84-a74c-3cd7cf609795
+
+### Create new card
+POST http://localhost:8080/cards
+Content-Type: application/json
+
+{
+  "title": "Test Card",
+  "description": "This is a test card",
+  "assignment": [
+    "123e4567-e89b-12d3-a456-426614174000"
+  ],
+  "content": "Test content",
+  "authorId": "123e4567-e89b-12d3-a456-426614174000"
+}
+
+### Update card
+PUT http://localhost:8080/cards/f48fa293-7cfc-41d3-9f9b-f83059d1f010
+Content-Type: application/json
+
+{
+  "title": "Updated Test Card",
+  "description": "This is an updated test card",
+  "assignment": [
+    "123e4567-e89b-12d3-a456-426614174000"
+  ],
+  "content": "Updated content",
+  "id": "b3f5fbee-c6e1-4d3e-a3e4-b7133ead0e10"
+}
+
+### Delete card
+DELETE http://localhost:8080/cards/f937fc38-cf42-4d84-a74c-3cd7cf609795
